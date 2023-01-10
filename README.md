@@ -1,9 +1,26 @@
-User Story
+# 19 Progressive Web Applications (PWA): Text Editor
+
+## Your Task
+
+As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+
+Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+
+To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+
+You will deploy this full-stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
+
+## User Story
+
+```md
 AS A developer
 I WANT to create notes or code snippets with or without an internet connection
 SO THAT I can reliably retrieve them for later use
+```
 
-Acceptance Criteria
+## Acceptance Criteria
+
+```md
 GIVEN a text editor web application
 WHEN I open my application in my editor
 THEN I should see a client server folder structure
@@ -29,92 +46,97 @@ WHEN I register a service worker
 THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
 WHEN I deploy to Heroku
 THEN I should have proper build scripts for a webpack application
+```
 
-Mock-Up
+## Mock-Up
+
 The following animation demonstrates the application functionality:
 
-Demonstration of the finished Module 19 Challenge being used in the browser and then installed.
+![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
 
-The following image shows the application's manifest.json file:
+The following image shows the application's `manifest.json` file:
 
-Demonstration of the finished Module 19 Challenge with a manifest file in the browser.
+![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
 
 The following image shows the application's registered service worker:
 
-Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.
+![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
 
 The following image shows the application's IndexedDB storage:
 
-Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.
+![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
 
-Grading Requirements
-NOTE
-If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+## Grading Requirements
 
-A repository that has no code
-
-A repository that includes a unique name but nothing else
-
-A repository that includes only a README file but nothing else
-
-A repository that only includes starter code
+> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+>
+> * A repository that has no code
+>
+> * A repository that includes a unique name but nothing else
+>
+> * A repository that includes only a README file but nothing else
+>
+> * A repository that only includes starter code
 
 This Challenge is graded based on the following criteria:
 
-Technical Acceptance Criteria: 40%
-Satisfies all of the above acceptance criteria plus the following:
+### Technical Acceptance Criteria: 40%
 
-Uses IndexedDB to create an object store and includes both GET and PUT methods
+* Satisfies all of the above acceptance criteria plus the following:
 
-The application works without an internet connection
+  * Uses IndexedDB to create an object store and includes both GET and PUT methods
 
-Automatically saves content inside the text editor when the DOM window is unfocused
+  * The application works without an internet connection
 
-Bundled with webpack
+  * Automatically saves content inside the text editor when the DOM window is unfocused
 
-Create a service worker with workbox that Caches static assets
+  * Bundled with webpack
 
-The application should use babel in order to use async / await
+  * Create a service worker with workbox that Caches static assets
 
-Application must have a generated manifest.json using the WebpackPwaManifest plug-in
+  * The application should use babel in order to use async / await
 
-Can be installed as a Progressive Web Application
+  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
 
-Deployment: 32%
-Application deployed to Heroku at live URL with build scripts
+  * Can be installed as a Progressive Web Application
 
-Application loads with no errors
+### Deployment: 32%
 
-Application GitHub URL submitted
+* Application deployed to Heroku at live URL with build scripts
 
-GitHub repo contains application code
+* Application loads with no errors
 
-Application Quality: 15%
-Application user experience is intuitive and easy to navigate
+* Application GitHub URL submitted
 
-Application user interface style is clean and polished
+* GitHub repo contains application code
 
-Application resembles the mock-up functionality provided in the Challenge instructions
+### Application Quality: 15%
 
-Repository Quality: 13%
-Repository has a unique name
+* Application user experience is intuitive and easy to navigate
 
-Repository follows best practices for file structure and naming conventions
+* Application user interface style is clean and polished
 
-Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+* Application resembles the mock-up functionality provided in the Challenge instructions
 
-Repository contains multiple descriptive commit messages
+### Repository Quality: 13%
 
-Repository contains a quality README file with description, screenshot, and link to deployed application
+* Repository has a unique name
 
-How to Submit the Challenge
-You are required to submit BOTH of the following for review:
+* Repository follows best practices for file structure and naming conventions
 
-The URL of the functional, deployed application.
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+* Repository contains multiple descriptive commit messages
 
-NOTE
-You are allowed to miss up to two Challenge assignments and still earn your certificate. If you complete all Challenge assignments, your lowest two grades will be dropped. If you wish to skip this assignment, click Next, and move on to the next Module.
+* Repository contains quality README file with description, screenshot, and link to deployed application
 
-Comments are disabled for graded submissions in BootCamp Spot. If you have questions about your feedback, please notify your instructional staff or the Student Success Manager. If you would like to resubmit your work for an improved grade, you can use the Resubmit Assignment button to upload new links. You may resubmit up to three times for a total of four submissions.
+## Review
+
+You are required to submit the following for review:
+
+* The URL of the deployed application
+
+* The URL of the GitHub repository, with a unique name and a README describing the project
+
+- - -
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
