@@ -155,9 +155,7 @@ SOFTWARE.
 
 ## Screenshots
 
-![Photo ex.1](./assets/Thought-1.png)
-
-![Photo ex.2](./assets/Thought-2.png)
+![Photo ex.1](./images/Screenshot%202023-01-14%20052305.png)
 
 ## Contributors
 
