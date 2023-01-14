@@ -89,17 +89,20 @@ git clone git@github.com:Darin1027/Text-Editor.git
 
 ```
 
-Run the below commands to install any missing dependencies
+Run the below scripts in your root directory `package.json` file
 
 ```
-npm install express
+  "scripts": {
+    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server nodemon server.js --ignore client",
+    "build": "cd client && npm build",
+    "install": "cd client && npm install",
+    "client": "cd client && npm start"
+  },
 ```
 
-```
-npm install mongoose
-```
-
-Or, since the Package.Json is included you can run the below command to install all the dependencies
+Run the following command to install all packages
 
 ```
 npm i
@@ -113,7 +116,7 @@ npm i
 - Navigate to the working directory in the terminal and run the below to start the application
 
 ```
-npm start
+npm run start
 ```
 
 ## License
@@ -156,22 +159,6 @@ SOFTWARE.
 
 ![Photo ex.2](./assets/Thought-2.png)
 
-![Photo ex.3](./assets/Thought-3.png)
-
-![Photo ex.4](./assets/Thought-4.png)
-
-![Photo ex.5](./assets/Thought-5.png)
-
-![Photo ex.6](./assets/Screenshot_20230110_071041.png)
-
-![Photo ex.7](./assets/Screenshot_20230110_071051.png)
-
-![Photo ex.8](./assets/Screenshot_20230110_071100.png)
-
-![Photo ex.9](./assets/Screenshot_20230110_071111.png)
-
-![Photo ex.10](./assets/Screenshot_20230110_071120.png)
-
 ## Contributors
 
 - Darin Palombo [dplb1027@gmail.com]
@@ -189,8 +176,8 @@ dplb1027@gmail.com
 
 ## Links
 
-- [Github Link](https://github.com/Darin1027/Social-Network-API)
-- [Demo Video Link](https://watch.screencastify.com/v/OApxiLnvzcmznsARCZGs)
+- [Github Link](https://github.com/Darin1027/Text-Editor)
+- [Deployed App Link]()
 
 ## Resources
 
