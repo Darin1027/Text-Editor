@@ -19,22 +19,21 @@ module.exports = () => {
     plugins: [
       // Webpack plugin that generates our html file and injects our bundles.
       new HtmlWebpackPlugin({
-        template: "./src/index.html",
+        template: "./index.html",
         title: "Test Editor",
       }),
       // Injects our custom service worker
       new InjectManifest({
-        swSrc: "./src/src-sw.js",
+        swSrc: "./src-sw.js",
         swDest: "src-sw.js",
-        include: [/\.html$/, /\.js$/, /\.css$/, /\.png$/],
       }),
       // Creates a manifest.json file.
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: "My Progressive Web App",
-        short_name: "My PWA",
-        description: "My awesome Progressive Web App!",
+        name: "Text Editor",
+        short_name: "T.E",
+        description: "This is a Text Editor",
         background_color: "#ffffff",
         theme_color: "#ffffff",
         start_url: "/",
