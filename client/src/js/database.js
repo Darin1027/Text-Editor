@@ -25,8 +25,9 @@ export const postDb = async (content) => {
   const store = tx.objectStore("jate");
   // Use the .put() method on the store and pass in the content.
   store.add(content);
+  const request = store.add({ id: 1, tx: content });
   // Get confirmation of the request.
-  await tx.done;
+  const result = await request;
   console.log("🚀 - data saved to the database", result);
 };
 
@@ -40,11 +41,16 @@ export const getDb = async () => {
   // Open up the desired object store.
   const store = tx.objectStore("jate");
   // Use the .getAll() method to get all data in the database.
-  const data = await store.getAll();
+  const request = store.getAll();
   // Get confirmation of the request.
   const result = await request;
   console.log("result.value", result);
-  return data;
+  if (result.value !== null) {
+    return result.value;
+  } else {
+    console.log("result.value is null");
+    return result;
+  }
 };
 
 // Start the database.
