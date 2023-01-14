@@ -16,7 +16,7 @@ const initdb = async () =>
   });
 
 // Export a function we will use to POST to the database.
-export const postDb = async (content) => {
+export const putDb = async (content) => {
   // Create a connection to the database database and version we want to use.
   const db = await openDB("jate", 1);
   // Create a new transaction and specify the database and data privileges.
