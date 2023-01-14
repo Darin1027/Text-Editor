@@ -1,26 +1,31 @@
-# 19 Progressive Web Applications (PWA): Text Editor
+# Text Editor
 
-## Your Task
+## Table of Contents
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+1. [ Description. ](#description)
+2. [ Installation. ](#installation)
+3. [ Usage. ](#usage)
+4. [ License. ](#license)
+5. [ Tests. ](#tests)
+6. [ Questions. ](#questions)
+7. [ Screenshots. ](#screenshots)
+8. [ Contributors. ](#contributors)
+9. [ Resources. ](#resources)
+10. [ Links. ](#links)
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+## Description
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+- User Story
 
-You will deploy this full-stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
-
-## User Story
-
-```md
+```
 AS A developer
 I WANT to create notes or code snippets with or without an internet connection
 SO THAT I can reliably retrieve them for later use
 ```
 
-## Acceptance Criteria
+- Acceptance Criteria
 
-```md
+```
 GIVEN a text editor web application
 WHEN I open my application in my editor
 THEN I should see a client server folder structure
@@ -48,95 +53,149 @@ WHEN I deploy to Heroku
 THEN I should have proper build scripts for a webpack application
 ```
 
-## Mock-Up
+## Installation
 
-The following animation demonstrates the application functionality:
+- Clone the repository using:
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+```
+git clone git@github.com:Darin1027/Text-Editor.git
+```
 
-The following image shows the application's `manifest.json` file:
+- Ensure you are in the current working directory
+- Ensure all dependencies are installed as shown below installation instructions are below:
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
+```
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/runtime": "^7.15.3",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "http-server": "^0.11.1",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0",
+    "webpack-pwa-manifest": "^4.3.0",
+    "workbox-webpack-plugin": "^6.2.4"
+  },
+  "dependencies": {
+    "code-mirror-themes": "^1.0.0",
+    "idb": "^6.1.2"
+  }
+}
 
-The following image shows the application's registered service worker:
+```
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+Run the below commands to install any missing dependencies
 
-The following image shows the application's IndexedDB storage:
+```
+npm install express
+```
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+```
+npm install mongoose
+```
 
-## Grading Requirements
+Or, since the Package.Json is included you can run the below command to install all the dependencies
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+```
+npm i
+```
 
-This Challenge is graded based on the following criteria:
+## Usage
 
-### Technical Acceptance Criteria: 40%
+- Ensure all depencies and above steps are fulfilled
+- Navigate to the working directory and open a terminal and run the below command
 
-* Satisfies all of the above acceptance criteria plus the following:
+- Navigate to the working directory in the terminal and run the below to start the application
 
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
+```
+npm start
+```
 
-  * The application works without an internet connection
+## License
 
-  * Automatically saves content inside the text editor when the DOM window is unfocused
+- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  * Bundled with webpack
+```
+MIT License
 
-  * Create a service worker with workbox that Caches static assets
+Copyright (c) 2022 Holiday-Wishlist-App
 
-  * The application should use babel in order to use async / await
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-  * Can be installed as a Progressive Web Application
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
-### Deployment: 32%
+- https://opensource.org/licenses/MIT
 
-* Application deployed to Heroku at live URL with build scripts
+## Tests
 
-* Application loads with no errors
+- N/A
 
-* Application GitHub URL submitted
+## Screenshots
 
-* GitHub repo contains application code
+![Photo ex.1](./assets/Thought-1.png)
 
-### Application Quality: 15%
+![Photo ex.2](./assets/Thought-2.png)
 
-* Application user experience is intuitive and easy to navigate
+![Photo ex.3](./assets/Thought-3.png)
 
-* Application user interface style is clean and polished
+![Photo ex.4](./assets/Thought-4.png)
 
-* Application resembles the mock-up functionality provided in the Challenge instructions
+![Photo ex.5](./assets/Thought-5.png)
 
-### Repository Quality: 13%
+![Photo ex.6](./assets/Screenshot_20230110_071041.png)
 
-* Repository has a unique name
+![Photo ex.7](./assets/Screenshot_20230110_071051.png)
 
-* Repository follows best practices for file structure and naming conventions
+![Photo ex.8](./assets/Screenshot_20230110_071100.png)
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+![Photo ex.9](./assets/Screenshot_20230110_071111.png)
 
-* Repository contains multiple descriptive commit messages
+![Photo ex.10](./assets/Screenshot_20230110_071120.png)
 
-* Repository contains quality README file with description, screenshot, and link to deployed application
+## Contributors
 
-## Review
+- Darin Palombo [dplb1027@gmail.com]
 
-You are required to submit the following for review:
+## Questions
 
-* The URL of the deployed application
+Want to see more of my work?
 
-* The URL of the GitHub repository, with a unique name and a README describing the project
+- [Github Link](https://github.com/Darin1027)
+  <br/>
 
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Contact Me
+
+dplb1027@gmail.com
+
+## Links
+
+- [Github Link](https://github.com/Darin1027/Social-Network-API)
+- [Demo Video Link](https://watch.screencastify.com/v/OApxiLnvzcmznsARCZGs)
+
+## Resources
+
+- https://www.npmjs.com/package/mongoose
+- https://www.tutorialspoint.com/mongodb/index.htm
+
+* https://www.npmjs.com/package/dotenv
+* https://www.npmjs.com/package/express

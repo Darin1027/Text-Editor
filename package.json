@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\"",
-    "start": "npm run build && cd server.js",
+    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
+    "start": "npm run build && cd server && node server.js",
     "server": "cd server nodemon server.js --ignore client",
     "build": "cd client && npm build",
     "install": "cd client && npm install",
@@ -16,7 +16,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "idb": "^7.1.1",
     "if-env": "^1.0.4"
   },
   "devDependencies": {
