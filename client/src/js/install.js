@@ -9,22 +9,18 @@ window.addEventListener("beforeinstallprompt", (event) => {
 });
 
 butInstall.addEventListener("click", async () => {
-  // Show the prompt
-  window.deferredPrompt.prompt();
-  // Wait for the user to respond to the prompt
-  const choice = await window.deferredPrompt.userChoice;
-  if (choice.outcome === "accepted") {
-    console.log("User accepted the A2HS prompt");
-  } else {
-    console.log("User dismissed the A2HS prompt");
+  const promptEvent = window.deferredPrompt;
+  if (!promptEvent) {
+    return;
   }
-  // Hide the "Add to Home Screen" button
-  butInstall.style.display = "none";
-  // Clear the deferred prompt variable
+  // Show prompt
+  promptEvent.prompt();
+  // Reset the deferred prompt variable, it can only be used once.
   window.deferredPrompt = null;
+  butInstall.classList.toggle("hidden", true);
 });
 
 window.addEventListener("appinstalled", (event) => {
-  console.log("PWA Installed", event);
-  alert("PWA Installed Successfully!");
+  // Clear prompt
+  window.deferredPrompt = null;
 });
